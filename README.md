@@ -24,9 +24,22 @@ In our app from chapter one, we imported packages from Node.js itself e.g., http
 
 We learnt how to install third party custom packages using npm. A core custom package is Express which helps make it easier to handle requests and serve responses, thus making app development in Node easier in general. We generated the package.json file that maintains our project metadata particularly its dependencies in an organized manner. We also learnt how to serve static files to make CSS an JavaScript files available to the HTML client files.
 
-# Chapter 3: 
+# Chapter 3: Beginning Our Blog Project
 Install NODEMON
 ```
     $ npm install nodemon --save-dev
 ```
 We began our blog project with an existing blog template from startbootstrap.com and incorporated it into a Node.js project. Using the nodemon package, we automatically detect code changes in our project and restart the server. Page routes were created to serve the home, about and post pages. A navigation bar was created to contain the links to these routes.
+
+# Chapter 4: Templating Engines
+EJS is one of the more popular templating engines and is made bu the people who created Express. All these different templating engines at the end of the day have the same purpose which is to output HTML.
+
+Install EJS:
+```
+    $ npm install ejs --save
+```
+
+Documentations of EJS:
+https://ejs.co/#docs 
+
+We refactored our code to use the EJS templating engine to dynamically render HTML pages. We called res.render to dynamically render a view with some variables. To resolve the problem of repeating code in multiple pages for e.g. navigation bar, we used EJS layouts.
