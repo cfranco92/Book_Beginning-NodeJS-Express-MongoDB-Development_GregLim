@@ -43,3 +43,34 @@ Documentations of EJS:
 https://ejs.co/#docs 
 
 We refactored our code to use the EJS templating engine to dynamically render HTML pages. We called res.render to dynamically render a view with some variables. To resolve the problem of repeating code in multiple pages for e.g. navigation bar, we used EJS layouts.
+
+# Chapter 5: Introduction to MongoDB
+We will use MongoDB as the backend database for our app. You can of course use other solutions to persist your application data e.g.in file, in a relational SQL database, or in another kind of storage mechanism. In this chapter, we wil cover the popular MongoDB for database storage.
+
+Install MongoDB:
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/ 
+
+First run:
+```
+   brew tap mongodb/brew 
+```
+```
+    brew install mongodb.community@4.0
+```
+
+Running MongoDB:
+```
+    mongod --config /usr/local/etc/mongod-conf
+```
+
+Installing MongoDB Compass:
+https://www.mongodb.com/download-center/compass
+
+Add Mongoose library:
+```
+    $ npm install mongoose
+```
+
+There are many search constraints conditions you can apply to find. Refer to https://docs.mongodb.com/manual/tutorial/query-documents/ for more information.
+
+We were introduced to MongoDB, a NoSQL database that stores data in the form of collections and documents. Using Mongoose, we connected our Node application with the Mongo database. We defined models using the schema interface to represent the collections in our database. We illustrated Create, Read, Update and Delete operations via Mongoose. Finally, we used MongoDB Compass to see the stored data visually in MongoDB.
